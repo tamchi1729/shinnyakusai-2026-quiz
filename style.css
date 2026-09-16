@@ -1,0 +1,257 @@
+:root {
+  --paper: #f5f0e6;
+  --paper-dark: #e9dfcf;
+  --ink: #292522;
+  --wine: #7b3038;
+  --green: #55716d;
+  --gold: #b18a52;
+  --line: #c8bba7;
+  --error: #8a4a42;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans JP",
+    sans-serif;
+  line-height: 1.8;
+}
+
+.container {
+  width: min(100% - 32px, 680px);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.festival-name {
+  margin: 0;
+  color: var(--wine);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+}
+
+h1,
+h2 {
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    "Noto Serif JP",
+    serif;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 4px 0;
+  color: var(--wine);
+  font-size: clamp(1.8rem, 7vw, 2.7rem);
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+.paper {
+  position: relative;
+  padding: 28px 24px;
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(70, 50, 30, 0.06);
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  right: 9px;
+  bottom: 9px;
+  border: 1px solid var(--paper-dark);
+  pointer-events: none;
+}
+
+.paper > * {
+  position: relative;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--wine);
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+.cipher-box {
+  margin: 24px 0;
+  padding: 18px 12px;
+  background: var(--paper);
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  text-align: center;
+}
+
+.cipher-label {
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+.cipher {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid #aa9a86;
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 3px solid rgba(85, 113, 109, 0.3);
+  outline-offset: 2px;
+  border-color: var(--green);
+}
+
+button {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  background: var(--green);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45605c;
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(123, 48, 56, 0.4);
+  outline-offset: 3px;
+}
+
+.message {
+  min-height: 1.8em;
+  margin-top: 14px;
+  color: var(--error);
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.hint-list {
+  display: grid;
+  gap: 12px;
+}
+
+.hint-card {
+  padding: 14px 16px;
+  background: var(--paper);
+  border-left: 4px solid var(--wine);
+}
+
+.hint-number {
+  margin-bottom: 4px;
+  color: var(--wine);
+  font-weight: 700;
+}
+
+.hint-text {
+  margin: 0;
+}
+
+footer {
+  padding-top: 24px;
+  color: var(--green);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 4px;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.noscript-message {
+  width: min(100% - 32px, 680px);
+  margin: 24px auto;
+  padding: 24px;
+  background: #fffdf8;
+  border: 2px solid var(--wine);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, 680px);
+    padding: 20px 0;
+  }
+
+  .paper {
+    padding: 24px 18px;
+  }
+
+  .cipher {
+    letter-spacing: 0.02em;
+  }
+}
