@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新薬祭・秘密の案内所</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="site-header">
+      <p class="festival-name">新薬祭</p>
+      <h1>秘密の案内所</h1>
+      <p class="subtitle">クイズラリー案内所</p>
+    </header>
+
+    <section class="paper">
+      <h2>案内所へようこそ</h2>
+
+      <p>
+        ここは、クイズの場所を示す<br>
+        秘密の案内所です。
+      </p>
+
+      <p>
+        下の暗号を読み解き、<br>
+        合言葉を入力してください。
+      </p>
+
+      <div class="cipher-box">
+        <p class="cipher-label">暗号</p>
+        <p class="cipher">ろ　ま　ん　ら　ま　ん</p>
+      </div>
+
+      <label for="answer">合言葉を入力</label>
+
+      <input
+        type="text"
+        id="answer"
+        placeholder="ひらがなで入力"
+        autocomplete="off"
+      >
+
+      <button id="unlockButton">
+        秘密の案内を開く
+      </button>
+
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="hintSection" class="paper hidden">
+      <h2>秘密の案内書</h2>
+
+      <p>
+        封印が解かれました。<br>
+        以下の手がかりを頼りに、クイズの場所を探してください。
+      </p>
+
+      <div id="hintList" class="hint-list"></div>
+    </section>
+
+    <footer>
+      <p>新薬祭「浪漫爛漫」</p>
+      <p class="small">
+        ヒントを表示できない場合は、受付でお尋ねください。
+      </p>
+    </footer>
+  </main>
+
+  <noscript>
+    <div class="noscript-message">
+      <h2>ヒントを表示できません</h2>
+      <p>
+        JavaScriptが無効になっています。<br>
+        受付でヒントカードを受け取ってください。
+      </p>
+    </div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
