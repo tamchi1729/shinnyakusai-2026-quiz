@@ -121,8 +121,8 @@ p {
 .cipher {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.4rem, 6vw, 2rem);
-  font-weight: 600;
+  font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
